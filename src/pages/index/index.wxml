@@ -1,0 +1,4 @@
+<!-- index.wxml -->
+<view class="h-screen flex flex-col items-center justify-center text-xl">
+  Hello Icedeer!
+</view>
