@@ -24,7 +24,7 @@
     "ignoreUploadUnusedFiles": true,
     "useCompilerPlugins": false
   },
-  "appid": "wx6ffee4673b257014",
+  "appid": "touristappid",
   "projectname": "weapp-wf",
   "condition": {},
   "compileType": "miniprogram",

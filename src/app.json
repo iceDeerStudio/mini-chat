@@ -1,9 +1,9 @@
 {
-  "pages": ["pages/index/index"],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "icedeer-ai",
-    "navigationBarTextStyle": "black"
-  }
+    "pages": ["pages/index/index"],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "icedeer-ai",
+        "navigationBarTextStyle": "black"
+    }
 }
