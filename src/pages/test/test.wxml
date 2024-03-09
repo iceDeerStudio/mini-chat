@@ -1,25 +1,36 @@
-<view class="flex flex-col gap-4 whitespace-nowrap bg-gray-300">
-    <view class="my-16 text-center text-2xl font-bold text-[#2244cc]">这是一个设计尺寸测试页面</view>
-    <p class="text-xs">xs 字号</p>
-    <p class="text-sm">sm 字号</p>
-    <p class="text-base">base 字号</p>
-    <p class="text-lg">lg 字号</p>
-    <p class="text-2xl">2xl 字号</p>
-    <p class="text-3xl">3xl 字号</p>
-    <p class="text-4xl">4xl 字号</p>
-    <p class="text-5xl">5xl 字号</p>
-    <p class="text-6xl">6xl 字号</p>
-    <p class="text-7xl">7xl 字号</p>
-    <p class="text-8xl">8xl 字号</p>
-    <p class="text-9xl">9xl 字号</p>
-    <view class="flex flex-col gap-8">
-        <view
-            wx:for="{{ lens }}"
-            wx:key="{{ index }}"
-            class="h-10 rounded bg-[#2244cc] text-white drop-shadow-md"
-            style="width: {{ item.pixels }}rpx;"
-        >
-            {{ item.name + ' ' + item.pixels }}
-        </view>
-    </view>
-</view>
+<div class="flex flex-col whitespace-nowrap bg-gray-300">
+    <div class="my-16 text-center text-2xl font-bold text-[#2244cc]">这是一个设计尺寸测试页面</div>
+    <div class="flex flex-col">
+        <p class="text-xs">xs 字号</p>
+        <p class="text-sm">sm 字号</p>
+        <p class="text-base">base 字号</p>
+        <p class="text-lg">lg 字号</p>
+        <p class="text-2xl">2xl 字号</p>
+        <p class="text-3xl">3xl 字号</p>
+        <p class="text-4xl">4xl 字号</p>
+        <p class="text-5xl">5xl 字号</p>
+        <p class="text-6xl">6xl 字号</p>
+        <p class="text-7xl">7xl 字号</p>
+        <p class="text-8xl">8xl 字号</p>
+        <p class="text-9xl">9xl 字号</p>
+    </div>
+    <div class="flex flex-col font-bold">
+        <p class="text-xs">xs 字号</p>
+        <p class="text-sm">sm 字号</p>
+        <p class="text-base">base 字号</p>
+        <p class="text-lg">lg 字号</p>
+        <p class="text-2xl">2xl 字号</p>
+        <p class="text-3xl">3xl 字号</p>
+        <p class="text-4xl">4xl 字号</p>
+        <p class="text-5xl">5xl 字号</p>
+        <p class="text-6xl">6xl 字号</p>
+        <p class="text-7xl">7xl 字号</p>
+        <p class="text-8xl">8xl 字号</p>
+        <p class="text-9xl">9xl 字号</p>
+    </div>
+    <div class="flex flex-col gap-4">
+        <div wx:for="{{ lens }}" wx:key="name" class="h-8 rounded bg-[#2244cc] leading-8 text-white drop-shadow-md" style="width: {{ item.pixels * 2 }}rpx;">
+            Name: {{ item.name + ' rpx: ' + item.pixels }}
+        </div>
+    </div>
+</div>

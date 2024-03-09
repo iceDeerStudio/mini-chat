@@ -13,9 +13,10 @@
     },
     "pages": ["pages/index/index", "pages/test/test"],
     "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "icedeer-ai",
-        "navigationBarTextStyle": "black"
-    }
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
 }

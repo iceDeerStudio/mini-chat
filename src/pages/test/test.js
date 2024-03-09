@@ -39,5 +39,3 @@ Component({
         },
     },
 })
-
-console.log(String.prototype)
