@@ -53,7 +53,14 @@ if (isLocal) {
 
 // 在 gulp 里使用，先使用 postcss 转化 css，触发 tailwindcss ，然后转化 transformWxss， 然后 transformJs, transformWxml
 const { transformJs, transformWxml, transformWxss } = createPlugins({
-    rem2rpx: true,
+    rem2rpx: {
+        // 32 意味着 1rem = 32rpx
+        rootValue: 16,
+        // 默认所有属性都转化
+        propList: ['*'],
+        // 转化的单位,可以变成 px / rpx
+        transformUnit: 'rpx',
+    },
 })
 // {
 //   mangle: true

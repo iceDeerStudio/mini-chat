@@ -1,3 +1,3 @@
-<view class="flex aspect-square w-full bg-[#2244cc]">
+<view class="flex h-[100vh] w-full bg-[#2244cc]">
     <view class="m-auto text-2xl text-white">HELLOW, CHAT!</view>
 </view>
