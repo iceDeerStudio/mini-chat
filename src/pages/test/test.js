@@ -1,5 +1,8 @@
-Component({
+Page({
     data: {
+        statusH: 0,
+        tabH: 0,
+        capsuleH: 0,
         lens: [
             { name: '1', size: '0.25rem', pixels: '4' },
             { name: '1.5', size: '0.375rem', pixels: '6' },
@@ -34,8 +37,12 @@ Component({
             { name: '80', size: '20rem', pixels: '320' },
             { name: '96', size: '24rem', pixels: '384' },
         ],
-        dynamicStyle: {
-            width: '100px',
-        },
+    },
+    onLoad() {
+        this.setData({
+            statusH: wx.getStatusBarH(),
+            tabH: wx.getTabbarH(),
+            capsuleH: wx.getCapsuleBarH(),
+        })
     },
 })

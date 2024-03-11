@@ -1,9 +1,25 @@
 {
     "tabBar": {
+        "color": "#94a3b8",
+        "selectedColor": "#2244cc",
         "list": [
             {
-                "pagePath": "pages/index/index",
-                "text": "首页"
+                "pagePath": "pages/chat/chat",
+                "text": "对话",
+                "iconPath": "public/tabbar/chat.png",
+                "selectedIconPath": "public/tabbar/chat-s.png"
+            },
+            {
+                "pagePath": "pages/shop/shop",
+                "text": "商店",
+                "iconPath": "public/tabbar/shop.png",
+                "selectedIconPath": "public/tabbar/shop-s.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "我的",
+                "iconPath": "public/tabbar/user.png",
+                "selectedIconPath": "public/tabbar/user-s.png"
             },
             {
                 "pagePath": "pages/test/test",
@@ -11,7 +27,7 @@
             }
         ]
     },
-    "pages": ["pages/index/index", "pages/test/test"],
+    "pages": ["pages/chat/chat", "pages/shop/shop", "pages/user/user", "pages/test/test"],
     "window": {
         "navigationBarTextStyle": "black",
         "navigationStyle": "custom"

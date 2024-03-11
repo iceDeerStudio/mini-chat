@@ -1,5 +1,9 @@
-<div class="flex flex-col whitespace-nowrap bg-gray-300">
-    <div class="my-16 text-center text-2xl font-bold text-[#2244cc]">这是一个设计尺寸测试页面</div>
+<div class="flex flex-col whitespace-nowrap bg-gray-300 gap-8">
+    <div class="flex w-full flex-col">
+        <div style="height: {{statusH}}px;" class="w-full bg-yellow-300">状态栏高度</div>
+        <div style="height: {{capsuleH}}px;" class="w-full bg-green-300 h-[84px]">胶囊栏高度</div>
+    </div>
+    <div class="text-center text-2xl font-bold text-[#2244cc]">这是一个设计尺寸测试页面</div>
     <div class="flex flex-col">
         <p class="text-xs">xs 字号</p>
         <p class="text-sm">sm 字号</p>
@@ -33,4 +37,5 @@
             Name: {{ item.name + ' rpx: ' + item.pixels }}
         </div>
     </div>
+    <div style="height: {{tabH}}px;" class="w-full bg-orange-300">这个高度应该是导航栏高度</div>
 </div>
