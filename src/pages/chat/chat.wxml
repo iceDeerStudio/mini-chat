@@ -1,1 +1,27 @@
-chat
+<scroll-view enhanced="{{true}}" scroll-y bounce enable-passive show-scrollbar="false" style="padding-top: {{headerH}}px; padding-bottom: {{tabH}}px;" class="bg-[#f5f5f5] w-full h-full flex flex-col">
+    <view style="height: {{headerH}}px; padding-top: {{statusH}}px" class="fixed top-0 flex flex-col w-full bg-white">
+        <view class="m-auto text-lg text-[#2244cc] font-bold">
+            {{modelName}}
+        </view>
+    </view>
+    <view wx:for="{{chats}}" wx:key="id" class="flex gap-2 py-4">
+        <view wx:if="{{item.from === 'UserName'}}" class="flex gap-2 px-2 w-full">
+            <view class="ml-auto">
+                <view class="text-[20rpx] leading-[36rpx] text-slate-400 w-full text-right">{{item.from}}</view>
+                <view class="w-[542rpx] rounded-lg text-white p-2 text-sm text-justify bg-[#2244cc]">{{item.msg}}</view>
+            </view>
+            <view class="w-9 h-9 bg-slate-400 rounded-full"></view>
+        </view>
+        <view wx:else class="flex gap-2 px-2 w-full">
+            <view class="w-9 h-9 bg-slate-400 rounded-full"></view>
+            <view class="mr-auto">
+                <view class="text-[20rpx] leading-[36rpx] text-slate-400 w-full">{{item.from}}</view>
+                <view class="w-[542rpx] rounded-lg text-slate-800 p-2 text-sm text-justify bg-[#fff]">{{item.msg}}</view>
+            </view>
+        </view>
+    </view>
+    <view style="height: {{tabH}}px;" class="fixed bottom-0 bg-white w-full p-2 flex gap-2">
+        <input class="h-full w-full bg-gray-100 rounded-lg"></input>
+        <view class="h-full aspect-[16/9] bg-[#2244cc] rounded-lg"></view>
+    </view>
+</scroll-view>

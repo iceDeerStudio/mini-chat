@@ -1,11 +1,16 @@
 App({
+    globalData: {
+        statusH: 0,
+        capsuleH: 0,
+        tabH: 0,
+    },
+    /**
+     * 在App示例上注册工具函数
+     * 并初始化全局变量
+     */
     onLaunch() {
-        /**
-         * 这个钩子用于定义全局函数（wx对象上）
-         */
-
         // 获取底栏高度
-        wx.getTabbarH = function () {
+        this.getTabbarH = function () {
             let bottomBarHeight
             wx.getSystemInfo({
                 success: function (res) {
@@ -15,8 +20,9 @@ App({
             })
             return bottomBarHeight
         }
+
         // 获取胶囊栏高度
-        wx.getCapsuleBarH = function () {
+        this.getCapsuleBarH = function () {
             let capsuleBarHeight
             wx.getSystemInfo({
                 success: function (res) {
@@ -32,8 +38,9 @@ App({
             })
             return capsuleBarHeight
         }
+
         // 获取状态栏高度
-        wx.getStatusBarH = function () {
+        this.getStatusBarH = function () {
             let statusBarHeight
             wx.getSystemInfo({
                 success: function (res) {
@@ -42,6 +49,12 @@ App({
                 },
             })
             return statusBarHeight
+        }
+        this.globalData = {
+            ...this.globalData,
+            statusH: this.getStatusBarH(),
+            capsuleH: this.getCapsuleBarH(),
+            tabH: this.getTabbarH(),
         }
     },
 })

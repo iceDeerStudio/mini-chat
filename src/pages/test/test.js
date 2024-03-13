@@ -1,4 +1,4 @@
-Page({
+Component({
     data: {
         statusH: 0,
         tabH: 0,
@@ -38,11 +38,14 @@ Page({
             { name: '96', size: '24rem', pixels: '384' },
         ],
     },
-    onLoad() {
-        this.setData({
-            statusH: wx.getStatusBarH(),
-            tabH: wx.getTabbarH(),
-            capsuleH: wx.getCapsuleBarH(),
-        })
+    methods: {
+        onLoad() {
+            const app = getApp()
+            this.setData({
+                statusH: app.getStatusBarH(),
+                tabH: app.getTabbarH(),
+                capsuleH: app.getCapsuleBarH(),
+            })
+        },
     },
 })
