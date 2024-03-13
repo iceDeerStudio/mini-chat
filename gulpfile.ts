@@ -82,6 +82,7 @@ const paths = {
     src: {
         baseDir: 'src',
         imgDir: 'src/image',
+        publicDir:'src/public/**/*',
         spriteDir: 'src/assets/sprites',
         scssDir: 'src/assets/scss',
         imgFiles: 'src/image/**/*',
@@ -96,6 +97,7 @@ const paths = {
         baseDir: 'dist',
         imgDir: 'dist/image',
         wxssFiles: `dist/**/*.${platformHit.css}`,
+        publicDir:'dist/public',
     },
     tmp: {
         baseDir: 'tmp',

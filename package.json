@@ -1,5 +1,5 @@
 {
-    "name": "mini-chat",
+    "name": "aideer",
     "version": "0.0.1",
     "description": "A chat ai for weapp.",
     "main": "index.js",

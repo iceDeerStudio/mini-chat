@@ -24,8 +24,8 @@
     "ignoreUploadUnusedFiles": true,
     "useCompilerPlugins": false
   },
-  "appid": "wxd3deaf6572ad15cc",
-  "projectname": "weapp-wf",
+  "appid": "wxf9ce15b368fc46c7",
+  "projectname": "AIdeer",
   "condition": {},
   "compileType": "miniprogram",
   "libVersion": "2.31.0",
