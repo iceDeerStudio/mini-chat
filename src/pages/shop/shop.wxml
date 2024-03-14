@@ -1,1 +1,53 @@
-shop
+<wxs src="./shop.wxs" module="mixin" />
+<scroll-view
+  enhanced="{{true}}"
+  scroll-y
+  bounce
+  enable-passive
+  show-scrollbar="false"
+  type="custom"
+  style="padding-top: {{headerH}}px;"
+  class="h-screen w-full bg-slate-100"
+>
+  <view
+    style="height: {{headerH}}px; padding-top: {{statusH}}px"
+    class="h-full fixed top-0 flex w-full bg-white box-border"
+  >
+    <view class="m-auto h-full max-h-[64px] rounded-full p-1 bg-[#E5E5E5] flex">
+      <view
+        wx:for="{{tabs}}"
+        bind:tap="selectTab"
+        data-index="{{index}}"
+        wx:key="tabs"
+        class="{{activeTabIndex===index ? 'bg-white text-[#2244CC]' : 'text-white'}}  w-[96px] rounded-full flex items-center justify-center text-sm"
+      >
+        {{tabs[index]}}
+      </view>
+    </view>
+  </view>
+  <list-view
+    wx:for="{{mixin.modalListFilter(modalList,activeTabIndex===1 && 'star')}}"
+    wx:key="id"
+    class="w-full box-border flex mt-4 px-4"
+  >
+    <view class="flex-1 flex h-[164px] gap-2 p-3 rounded-xl bg-white">
+      <image
+        aspectFill
+        src=""
+        class="h-[116px] w-[116px] rounded-lg bg-zinc-400"
+      />
+      <view class="flex flex-1 flex-col">
+        <text class="text-[#2244cc] font-bold leading-[48px]"
+          >{{item.name}}</text
+        >
+        <text
+          class="text-xs h-[68px] overflow-hidden leading-[34px] text-ellipsis text-zinc-600"
+          >{{item.description}}
+        </text>
+      </view>
+      <view class="h-5 w-5 my-auto ml-1 mr-3">
+        <image src="../../public/{{item.star ? 'star-fill.png':'star.png'}}" class="w-full h-full" />
+      </view>
+    </view>
+  </list-view>
+</scroll-view>

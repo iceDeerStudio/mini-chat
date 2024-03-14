@@ -11,7 +11,7 @@ module.exports = {
     jsxSingleQuote: true,
     quoteProps: 'as-needed',
     trailingComma: 'all',
-    singleAttributePerLine: false,
+    singleAttributePerLine: true,
     htmlWhitespaceSensitivity: 'css',
     vueIndentScriptAndStyle: false,
     proseWrap: 'preserve',

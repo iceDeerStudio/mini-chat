@@ -1,0 +1,14 @@
+{
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": { "parser": "json" }
+    },
+    {
+      "files": "*.wxml",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
+}

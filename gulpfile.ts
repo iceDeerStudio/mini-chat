@@ -82,12 +82,12 @@ const paths = {
     src: {
         baseDir: 'src',
         imgDir: 'src/image',
-        publicDir:'src/public/**/*',
+        publicDir: 'src/public/**/*',
         spriteDir: 'src/assets/sprites',
         scssDir: 'src/assets/scss',
         imgFiles: 'src/image/**/*',
         scssFiles: 'src/**/*.scss',
-        baseFiles: ['src/**/*.{png,jpg,json}'], // , '!src/assets/**/*', '!src/image/**/*'
+        baseFiles: ['src/**/*.{wxs,png,jpg,json}'], // , '!src/assets/**/*', '!src/image/**/*'
         assetsDir: 'src/assets',
         assetsImgFiles: 'src/assets/images/**/*.{png,jpg,jpeg,svg,gif}',
         wxmlFiles: `src/**/*.${platformHit.template}`,
@@ -97,7 +97,7 @@ const paths = {
         baseDir: 'dist',
         imgDir: 'dist/image',
         wxssFiles: `dist/**/*.${platformHit.css}`,
-        publicDir:'dist/public',
+        publicDir: 'dist/public',
     },
     tmp: {
         baseDir: 'tmp',
@@ -177,6 +177,7 @@ const watchHandler = async function (type: 'changed' | 'removed' | 'add', file: 
                 del([file.replace('src/', 'dist/')])
             }
         } else {
+            copyBasicFiles()
             // do sth
         }
     }

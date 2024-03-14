@@ -1,0 +1,12 @@
+var modalListFilter = function (listData, key) {
+    if (!key) {
+        return listData
+    }
+    return listData.filter(function (data) {
+        return data[key]
+    })
+}
+
+module.exports = {
+    modalListFilter: modalListFilter,
+}
